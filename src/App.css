@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Page Layout */
+.writer-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+}
+
+/* Background video styling */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6); /* Dim the video to make the content more visible */
+}
+
+/* Content Box */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Page Title */
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Input Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-field,
+.text-area {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-field {
+  height: 40px;
+}
+
+.text-area {
+  height: 120px;
+  resize: none;
+}
+
+.text-area:focus,
+.input-field:focus {
+  border-color: #007bff;
+}
+
+/* File Input Label */
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #666;
+}
+
+input[type="file"] {
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  background: none;
+  color: #333;
+}
+
+/* Book Cover Preview */
+img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Save Button */
+.submit-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .content-box {
+      padding: 30px;
+  }
+
+  h2 {
+      font-size: 1.6rem;
+  }
+
+  .submit-btn {
+      padding: 10px 15px;
+  }
+}
